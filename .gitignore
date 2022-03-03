@@ -16,13 +16,8 @@
 *.out
 *.app
 
-**/build
-**/docs
-**/examples
-**/misc
-
+# Directories
 build/
 docs/
 examples/
 misc/
-

@@ -9,29 +9,29 @@ ifndef verbose
 endif
 
 ifeq ($(config),debug)
-  graph_tests_config = debug
+  imgui_graphs_config = debug
 
 else ifeq ($(config),release)
-  graph_tests_config = release
+  imgui_graphs_config = release
 
 else
   $(error "invalid configuration $(config)")
 endif
 
-PROJECTS := graph_tests
+PROJECTS := imgui_graphs
 
 .PHONY: all clean help $(PROJECTS) 
 
 all: $(PROJECTS)
 
-graph_tests:
-ifneq (,$(graph_tests_config))
-	@echo "==== Building graph_tests ($(graph_tests_config)) ===="
-	@${MAKE} --no-print-directory -C . -f graph_tests.make config=$(graph_tests_config)
+imgui_graphs:
+ifneq (,$(imgui_graphs_config))
+	@echo "==== Building imgui_graphs ($(imgui_graphs_config)) ===="
+	@${MAKE} --no-print-directory -C . -f imgui_graphs.make config=$(imgui_graphs_config)
 endif
 
 clean:
-	@${MAKE} --no-print-directory -C . -f graph_tests.make clean
+	@${MAKE} --no-print-directory -C . -f imgui_graphs.make clean
 
 help:
 	@echo "Usage: make [config=name] [target]"
@@ -43,6 +43,6 @@ help:
 	@echo "TARGETS:"
 	@echo "   all (default)"
 	@echo "   clean"
-	@echo "   graph_tests"
+	@echo "   imgui_graphs"
 	@echo ""
 	@echo "For more information, see https://github.com/premake/premake-core/wiki"

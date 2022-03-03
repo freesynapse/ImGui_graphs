@@ -1,4 +1,4 @@
-workspace "graph_tests"
+workspace "imgui_graphs"
 
     location "build"
     
@@ -21,7 +21,7 @@ workspace "graph_tests"
     filter { }
 
 
-    project "graph_tests"
+    project "imgui_graphs"
 
         -- architecture: 'x86' or 'x86_64'
         architecture "x86_64"
@@ -75,14 +75,12 @@ workspace "graph_tests"
         includedirs
         {
             "src/imgui",
-            "libraries/glad/include",
-            "libraries/GLFW/include",
+            "dependencies/include",
         }
 
         libdirs
         {
-            "libraries/glad/lib",
-            "libraries/GLFW/lib",
+            "dependencies/lib",
         }
 
         links
