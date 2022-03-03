@@ -21,3 +21,8 @@
 **/examples
 **/misc
 
+build/
+docs/
+examples/
+misc/
+
