@@ -22,7 +22,7 @@ docs/
 examples/
 misc/
 
-build/**
-docs/**
-examples/**
-misc/**
+**/build
+**/docs
+**/examples
+**/misc
